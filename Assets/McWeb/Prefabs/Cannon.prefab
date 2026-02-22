@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5393444736869576141}
   m_Layer: 0
   m_Name: SpeedReducePoint
-  m_TagString: Untagged
+  m_TagString: SpeedReducePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 6290074098592670505}
   m_Layer: 0
   m_Name: CheckPoint
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,7 +283,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -298,6 +298,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 552462377272326875}
+  - component: {fileID: 4848831249372953953}
+  - component: {fileID: 44620118255469028}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -324,6 +326,36 @@ Transform:
   - {fileID: 1974328328431226435}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4848831249372953953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342037360402979234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0714c472ff6d1a4b999d354776d61dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movement
+  sens: 2
+  maxDisplacement: 100
+  maxPositionX: 3
+--- !u!114 &44620118255469028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342037360402979234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d977d95589bf3549a7b8451b7d8f4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shooting
+  firePoint: {fileID: 1974328328431226435}
+  bulletPrefab: {fileID: 7759689178159521663, guid: 78ac29dc00eaa974197e860730a02efa, type: 3}
+  fireCd: 0.2
 --- !u!1001 &730295950548045631
 PrefabInstance:
   m_ObjectHideFlags: 0
